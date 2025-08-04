@@ -1,0 +1,110 @@
+/* Flexslider */
+section.slider {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .flexslider {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        ul.slides {
+
+            li {}
+        }
+        .custom-navigation {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+
+            ol.flex-control-nav {
+                position: absolute;
+                bottom: 230px;
+                right: 0;
+                text-align: right;
+
+                li {
+                    display: inline-block;
+                    position: initial;
+                    font-size: 0;
+                    width: auto;
+
+                    a {
+                        background: #fff;
+                        width: 12px;
+                        height: 12px;
+                        margin: 0 6px;
+                        display: block;
+
+                        &.flex-active {
+                            background: #0085b1;
+                        }
+                    }
+                }
+            }
+
+            ul.flex-direction-nav {
+                position: relative;
+
+                li {
+                    position: absolute;
+                    left: 2%;
+                    top: 0;
+
+                    &:last-child {
+                        right: 2%;
+                        left: initial;
+                        top: -4px;
+                    }
+
+                    a {
+                        font-size: 0;
+                        text-decoration: none;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            font-size: 3rem;
+                            color: rgba($white,0.5);
+                            padding: 7px;
+                        }
+
+                        &.flex-next {
+                            &:before {
+                                display: inline-block;
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        &:hover {
+                            &:before {
+                                color: rgba($white,0.9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .flex-viewport {
+        height: 100%;
+        width: 100%;
+    }
+
+    ul.slides {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        height: 100%;
+        width: 100%;
+
+        li {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+    }
+}

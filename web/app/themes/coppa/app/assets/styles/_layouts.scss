@@ -1,0 +1,210 @@
+$grid: ( columns: 1, gutter: $grid-gutter, );
+$grid--tablet: ( columns: 12, gutter: $grid-gutter, media: "(min-width: #{$medium-screen})", );
+$grid--desktop: ( columns: 12, gutter: $grid-gutter, media: "(min-width: #{$large-screen})", );
+$grid--larger: ( columns: 12, gutter: $grid-gutter, media: "(min-width: #{$larger-screen})", );
+
+.wrapper {
+    @include margin(null auto);
+    @include padding(null $base-spacing);
+    max-width: 1280px;
+    overflow-x: hidden;
+    position: relative;
+    width:100%;
+
+    & > div{
+        padding: $base-spacing 0 $base-spacing/2;
+    }
+}
+
+.cols {
+    @include grid-container;
+    @include grid-collapse($grid);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    box-sizing: border-box;
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.align-bottom {
+        align-items: flex-end;
+    }
+}
+
+[class*='col_'] {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    // padding-right: 1.25rem;
+
+    // &:last-of-type {
+    //     padding-right: 0;
+    // }
+}
+
+.col_1_2 {
+    width: 100%;
+
+    @include grid-media($grid--tablet) {
+        width: 50%;
+        padding-right: 1.5rem;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+
+    & + .col_1_2 {
+
+        @include grid-media($grid--tablet) {
+            padding-left: 1.5rem;
+            padding-right: 0;
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &:nth-child(2n+1) {
+        @include grid-media($grid--tablet) {
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+    }
+}
+
+.col_1_3 {
+    width: 100%;
+
+    @include grid-media($grid--tablet) {
+        width: 33.3%;
+        padding-right: 1.25rem;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+
+    & + .col_1_3 {
+        
+        @include grid-media($grid--tablet) {
+            padding-right: 0.625rem;
+            padding-left: 0.625rem;
+
+            &:last-of-type {
+                padding-right: 0;
+                padding-left: 1.25rem;
+            }
+        }
+    }
+
+    &:nth-child(4) {
+
+        @include grid-media($grid--tablet) {
+            padding-right: 1.25rem;
+            padding-left: 0;
+        }
+    }
+
+    &:nth-child(3) {
+
+            @include grid-media($grid--tablet) {
+                padding-right: 0;
+                padding-left: 1.25rem;
+        }
+    }
+}
+
+.col_2_3 {
+    width: 100%;
+
+    @include grid-media($grid--tablet) {
+        width: 66.6%;
+        padding-right: 1.25rem;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+}
+
+.col_1_4 {
+    width: 100%;
+    padding: 1rem;
+
+    // &:last-of-type {
+    //     padding-right: 0;
+    // }
+
+    @include grid-media($grid--tablet) {
+        width: 50%;
+    }
+
+    @include grid-media($grid--desktop) {
+        width: 25%;
+    }
+}
+
+.col_3_4 {
+    width: 100%;
+    padding: 1rem;
+
+    // &:last-of-type {
+    //     padding-right: 0;
+    // }
+
+    @include grid-media($grid--tablet) {
+        width: 50%;
+    }
+
+    @include grid-media($grid--desktop) {
+        width: 75%;
+    }
+}
+
+.col_1_5 {
+    width: 50%;
+    padding: 1.25rem;
+
+    // &:last-of-type {
+    //     padding-right: 0;
+    // }
+
+    @include grid-media($grid--tablet) {
+        width: 33.3%;
+    }
+
+    @include grid-media($grid--desktop) {
+        width: 20%;
+    }
+}
+
+.col_4_5 {
+    width: 50%;
+    padding: 1.25rem;
+
+    &:last-of-type {
+        padding-right: 0;
+    }
+
+    @include grid-media($grid--tablet) {
+        width: 66.6%;
+    }
+
+    @include grid-media($grid--desktop) {
+        width: 80%;
+    }
+}
+
+.col_full {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+footer {
+    display: block;
+    background: $white;
+    color: #000;
+
+    .cols {
+        padding: 0;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover, &:focus {
+            color: #000;
+        }
+    }
+}

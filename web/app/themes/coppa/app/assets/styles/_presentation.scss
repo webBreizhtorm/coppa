@@ -1,0 +1,42 @@
+.presentation {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 40px 40px 0 40px;
+    img {
+        max-width: 350px!important;
+        margin: 0 auto;
+    }
+}
+
+.presentation__caption {
+    margin-top: 40px;
+    p {
+        font-size: 14px;
+    }
+}
+
+.presentation__title,
+.presentation__caption p {
+    color: #FFF;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.presentation__title {
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+@media all and (min-width: 900px) {
+
+    .presentation__title {
+        font-size: 9rem;
+    }
+
+    .presentation__caption {
+        p {
+            font-size: 18px;
+        }
+    }
+
+}

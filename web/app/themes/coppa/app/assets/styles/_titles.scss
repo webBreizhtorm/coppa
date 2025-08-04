@@ -1,0 +1,74 @@
+/* H2 titles */
+h2 {
+    color: $blue;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    font-family: $base-font-family;
+    font-weight: 700;
+    &:before {
+        content: " ";
+        position: absolute;
+        background: $dark-blue;
+        width: 7px;
+        height: 7px;
+        top: 0;
+        left: -20px;
+    }
+    &:after {
+        content: " ";
+        position: absolute;
+        background: $blue;
+        width: 9px;
+        height: 9px;
+        left: -10px;
+        top: -14px;
+    }
+    span {
+        display: block;
+        font-weight: initial;
+        color: $dark-blue;
+        font-size: 1.4rem;
+        font-family: $base-font-family;
+        font-weight: 300;
+    }
+}
+
+/* H3 titles */
+h3 {
+    color: $green;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding-bottom: 16px;
+    font-family: $base-font-family;
+    font-weight: 700;
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        width: 24px;
+        height: 3px;
+        background: $green;
+    }
+    span {
+        display: block;
+        font-family: $base-font-family;
+        font-weight: 300;
+        font-size: 1.4rem;
+        letter-spacing: initial;
+    }
+}
+
+/* H4 titles */
+h4 {
+    color: $blue;
+    text-transform: uppercase;
+    margin: 5px 0;
+    font-family: $base-font-family;
+    font-weight: 600;
+}

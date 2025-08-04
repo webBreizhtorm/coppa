@@ -1,0 +1,418 @@
+* {
+    box-sizing: border-box;
+    &:before {
+        box-sizing: border-box;
+    }
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    color: $white;
+    font-size: 62.5%;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    font-family: $base-font-family;
+}
+
+body {
+    padding: 0;
+    background: $base-background-color;
+    margin: 0 auto;
+    min-height: 100%;
+    width: 100%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+
+    &.home {
+        main {
+            // padding-top: $base-spacing*6;
+        }
+    }
+}
+
+header {
+    display: block;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+main {
+    // padding-top: $base-spacing*5;
+}
+
+footer {
+    display: block;
+    background: $dark-gray;
+    color: $white;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+hgroup,
+main,
+nav,
+summary {
+    display: block;
+}
+
+section {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $dark-gray;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $green;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:before {
+        text-decoration: none;
+        color: $blue;
+        transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    &:after {
+        text-decoration: none;
+        color: $blue;
+        transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    span {
+        text-decoration: none;
+        color: $blue;
+        transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    &:hover {
+        color: $dark-blue;
+        text-decoration: underline;
+    }
+}
+
+label {
+    margin-bottom: $base-spacing*1.2;
+
+    span {
+        font-family: $base-font-family;
+        font-size: 3rem;
+        line-height: 1.2rem;
+        color: $dark-gray;
+        font-weight: 400;
+    }
+}
+
+button {
+    color: $white;
+    text-decoration: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:before {
+        text-decoration: none;
+        color: $white;
+        transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    &:after {
+        text-decoration: none;
+        color: $white;
+        transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    span {
+        text-decoration: none;
+        color: $white;
+        transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        &:before {
+            text-decoration: none;
+            color: $white;
+            transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        &:after {
+            text-decoration: none;
+            color: $white;
+            transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+    }
+}
+
+select {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+textarea {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    padding: $base-spacing;
+    font-size: 1.4rem;
+    font-weight: 400;
+    outline: none;
+    resize: vertical;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+input {
+    color: $dark-gray;
+}
+
+input[type="submit"] {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+    border-radius: 0px;
+    font-size: 3.2rem;
+    line-height: 1.4rem;
+    padding: $base-spacing/2 $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+    font-family: $base-font-family;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+    &:hover {
+        background: $white;
+        color: $dark-gray;
+    }
+    &:focus {
+        background: $white;
+        color: $dark-gray;
+    }
+    &:active {
+        background: $white;
+        color: $dark-gray;
+    }
+}
+
+input[type="text"] {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+input[type="email"] {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+input[type="phone"], input[type="tel"] {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+input[type="search"] {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+input[type="password"] {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+input[type="number"] {
+    color: $dark-gray;
+    background: transparent;
+    border: 2px solid $dark-gray;
+    border-radius: 0px;
+    font-size: 1.4rem;
+    padding: $base-spacing;
+    font-weight: 400;
+    outline: none;
+    transition: all 275ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    &:hover {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:focus {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+    &:active {
+        border: 2px solid rgba($dark-gray,0.2);
+        background: $white;
+    }
+}
+
+/* Cookie */
+body {
+    #tarteaucitronRoot {
+        * {
+            font-family: $base-font-family !important;
+            font-size: 1.2rem !important;
+        }
+
+        #tarteaucitronAlertBig {
+            #tarteaucitronPersonalize {
+                background: $white;
+                color: $dark-blue;
+            }
+        }
+    }
+}

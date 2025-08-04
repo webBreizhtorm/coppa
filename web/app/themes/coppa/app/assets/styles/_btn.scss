@@ -1,0 +1,50 @@
+.btn {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1.5rem 2rem;
+    border: 0;
+    font-size: 0;
+    line-height: 1.4rem;
+    overflow: hidden;
+    background: $blue;
+    color: $white;
+    text-decoration: none !important;
+    text-align: center;
+    border-radius: 6px;
+    transition: 0.2s all;
+    &:hover {
+        background: #fff;
+        color: $blue;
+        transition: 0.4s all;
+        span {
+            color: $blue;
+        }
+    }
+    span {
+        font-size: 1.2rem;
+        color: $white;
+        display: block;
+    }
+}
+
+/* reverse */
+.btn.reverse {
+    background: transparent;
+    border: 1px solid #fff;
+    color: $white;
+    &:hover {
+        background: $blue;
+        border: 1px solid $blue;
+        color: $white;
+        span {
+            color: $white;
+        }
+    }
+    span {
+        color: $white;
+    }
+}

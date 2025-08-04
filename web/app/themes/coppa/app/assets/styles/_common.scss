@@ -1,0 +1,28 @@
+/* RGPD */
+#rgpd, #privacy {
+    font-style: italic;
+    font-size: 1.2rem;
+
+    a {
+        color: $blue;
+        text-decoration-line: underline;
+        text-decoration-color: $blue;
+        text-decoration-style: dashed;
+
+        span {
+            color: $blue;
+        }
+    }
+}
+
+#rgpd {
+    .wpcf7-list-item-label {
+        display: none;
+    }
+    margin-bottom: $base-spacing;
+}
+
+#privacy {
+    margin-top: $base-spacing*4;
+}
+ 
