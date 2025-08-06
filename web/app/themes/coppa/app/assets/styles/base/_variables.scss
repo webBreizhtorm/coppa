@@ -7,7 +7,7 @@ $grid-gutter: 0; /*2em*/
 // Typography
 //$base-font-family: $font-stack-system;
 $base-font-family: 'Montserrat', Arial, sans-serif;
-$heading-font-family: 'Amio', Arial, sans-serif;
+$heading-font-family: 'TidyScript', Arial, sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -63,9 +63,9 @@ $base-timing: ease;
 }
 
 @font-face {
-  font-family: 'Amio';
-  src: url('fonts/Amio Trial-Bold.woff2') format('woff2'),
-       url('fonts/Amio Trial-Bold.woff') format('woff');
+  font-family: 'TidyScript';
+  src: url('fonts/TidyScript-Bold.woff2') format('woff2'),
+       url('fonts/TidyScript-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
